@@ -10,3 +10,7 @@
 	Song.create(name: Faker::WorldCup.team, band: Faker::Music.band, album:Faker::Music.album, 
 		genre: Faker::Music.genre, chord: Faker::Music.chord)
 end
+
+#Song.where("chord like '%c'") -> search chord == 'c'
+#Song.where("band like 'The Beater'") -> search band == 'The Beater'
+#Song.where('genre LIKE ?', "%rock%") -> search genre when has 'rock'
