@@ -1,0 +1,46 @@
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+<p id="notice"><%= notice %></p>
+
+<center>
+  <h1>Songs</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody  style="text-align: center">
+      <tr class="table-active">  
+        <th><%= "Name" %></th>
+        <th ><%= "Band" %></th>
+        <th ><%= "Album" %></th>
+        <th ><%= "Genre" %></th>
+        <th ><%= "Chord" %></th>
+      </tr>
+
+      <% i = 0 %>
+      <% table = ["table-success", "table-danger", "table-warning", "table-info"] %>
+      <% @songlist.each do |song| %>
+        
+        <tr class=<%= table[i] %> >
+          <td><%= song.name %></td>
+          <td><%= song.band %></td>
+          <td><%= song.album %></td>
+          <td><%= song.genre %></td>
+          <td><%= song.chord %></td>
+        </tr>
+         <% if i == 2
+            break
+          else
+            i += 1
+          end %>
+      <% end %>
+    </tbody>
+  </table>
+</center>
+</body>

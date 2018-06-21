@@ -1,24 +1,5 @@
-# README
+ส่งการบ้านวันที่ 21/06/2018
+เรื่อง rails controller + view + json
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+html => `localhost:3000/song/html`
+json => `localhost:3000/song/json`
