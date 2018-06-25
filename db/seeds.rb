@@ -11,7 +11,7 @@
 # rails db:seed
 
 200.times do	
-	Song.create(name: Faker::WorldCup.team, band: Faker::Music.band, album:Faker::Music.album, 
+	Songs.create(name: Faker::WorldCup.team, band: Faker::Music.band, album:Faker::Music.album, 
 		genre: Faker::Music.genre, chord: Faker::Music.chord)
 end
 
