@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_21_053054) do
-
+ActiveRecord::Schema.define(version: 2018_06_20_091744) do
 
   create_table "songs", force: :cascade do |t|
     t.string "name"
@@ -20,7 +19,5 @@ ActiveRecord::Schema.define(version: 2018_06_21_053054) do
     t.string "genre"
     t.string "chord"
   end
-
-
 
 end

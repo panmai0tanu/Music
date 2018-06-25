@@ -10,14 +10,9 @@
 # rails db:migrate
 # rails db:seed
 
-200.times do
-  Songs.create([{
-    name: Faker::Name.name,
-    brand: Faker::Music.band,
-    album: Faker::Music.album,
-    genre: Faker::Music.genre,
-    chord: Faker::Music.chord
-  }])
+200.times do	
+	Song.create(name: Faker::WorldCup.team, band: Faker::Music.band, album:Faker::Music.album, 
+		genre: Faker::Music.genre, chord: Faker::Music.chord)
 end
 
 # Songs.find_c_chord
