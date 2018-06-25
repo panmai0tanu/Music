@@ -20,8 +20,8 @@
       <% i = 0 %>
       <% table = ["table-success", "table-danger", "table-warning", "table-info"] %>
       <% @songlist.each do |song| %>
-        <tr class = <%= table[i]%> >
-          <td><%= song.name %></td>
+        <tr class = <%= table[i]%> id="check-row" >
+          <td id="name-row"><%= song.name %></td>
           <td><%= song.band %></td>
           <td><%= song.album %></td>
           <td><%= song.genre %></td>
