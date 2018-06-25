@@ -1,12 +1,13 @@
 class SongsController < ApplicationController
-  def get_three_songs
-    @songs = Songs.all.limit(3)
+  def show_data
+    @songlist = Songs.all.limit(3)
   end
-  def get_three_songs_json
+
+  def show_json
     songs = Songs.all.limit(3)
-    
     render json: songs
   end
+  
   def show
   end
 end
