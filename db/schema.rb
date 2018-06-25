@@ -12,25 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2018_06_21_053054) do
 
-  create_table "beta", force: :cascade do |t|
-    t.text "name"
-    t.text "phone"
-    t.datetime "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "songs", force: :cascade do |t|
     t.string "name"
-    t.string "brand"
+    t.string "band"
     t.string "album"
     t.string "genre"
     t.string "chord"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+
 
 end
