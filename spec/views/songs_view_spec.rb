@@ -11,9 +11,10 @@ describe 'Song' , js: true do
   it 'check song name, band name, album' do
     visit 'song/html'
     within('table') do
-      expect(page).to have_xpath("thead/tr/th[1]", text: "Name")
-      expect(page).to have_xpath("thead/tr/th[2]", text: "Band")
-      expect(page).to have_xpath("thead/tr/th[3]", text: "Album")
+      #check data on colum 
+      expect(page).to have_xpath("tbody/tr[1]", text:"#{@songIndex0}" )
+      expect(page).to have_xpath("tbody/tr[2]", text:"#{@songIndex1}" )
+      expect(page).to have_xpath("tbody/tr[3]", text:"#{@songIndex2}" )
     end
   end
 end

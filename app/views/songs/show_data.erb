@@ -5,31 +5,33 @@
   <p id="notice"><%= notice %></p>
 
   <center>
-  <h1>Songs</h1>
-  <table>
-    <thead class="table-active" style="text-align: center">
-        <th><%= "Name" %></th>
-        <th ><%= "Band" %></th>
-        <th ><%= "Album" %></th>
-        <th ><%= "Genre" %></th>
-        <th ><%= "Chord" %></th>   
-    </thead>
+    <h1>Songs</h1>
+    <table>
+      <thead class="table-active" style="text-align: center">
+          <th><%= "Name" %></th>
+          <th ><%= "Band" %></th>
+          <th ><%= "Album" %></th>
+          <th ><%= "Genre" %></th>
+          <th ><%= "Chord" %></th>   
+      </thead>
 
-    <tbody>
+      <tbody>
+        <% i = 0 %>
+        <% id_name = ["name1","name2", "name3"] %>
+        <% table = ["table-success", "table-danger", "table-warning", "table-info"] %>
+        <% @songlist.each do |song| %>
+          <tr class = <%= table[i]%> >
+            <td><%= song.name %></td>
+            <td><%= song.band %></td>
+            <td><%= song.album %></td>
+            <td><%= song.genre %></td>
+            <td><%= song.chord %></td>
+          </tr>
+          <% i += 1 %>
+        <% end %>
+      </tbody>
+      
+    </table>
+  </center>
+</body>
 
-      <% i = 0 %>
-      <% table = ["table-success", "table-danger", "table-warning", "table-info"] %>
-      <% @songlist.each do |song| %>
-        <tr class = <%= table[i]%> >
-          <td><%= song.name %></td>
-          <td><%= song.band %></td>
-          <td><%= song.album %></td>
-          <td><%= song.genre %></td>
-          <td><%= song.chord %></td>
-        </tr>
-        <% i += 1 %>
-      <% end %>
-
-    </tbody>
-  </table>
-</center>
